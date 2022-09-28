@@ -1,19 +1,19 @@
-// getting computer input
+// Generate and return random input
 function getComputerChoice() {
   let choice = ["rock", "paper", "scissors"]; // choices
 
   // generate random by lentgh of choice array
   let randomNum = Math.floor(Math.random() * choice.length);
-  return choice[randomNum]; // parsing the randum number to choice
+  return choice[randomNum];
 }
 
-// getting users input
+// Prompt user for input and return
 function playerSelection() {
   let userChoice = prompt("choose between rock, paper and scissors", "");
   return userChoice.toLowerCase();
 }
 
-// compare computer and users value
+// Game logic
 function playRound(computerSelection, playerSelection) {
   // choose winner
   if (playerSelection === computerSelection) {
@@ -24,18 +24,19 @@ function playRound(computerSelection, playerSelection) {
     (playerSelection === "scissors" && computerSelection === "paper")
   ) {
     return true;
-  } else {
-    return false;
   }
+
+  return false;
 }
 
-// playround function that keeps playing untill certain number is reached
+// Game function that keeps playing round until certain point
 function game() {
   let result;
   let userWin = 0;
   let computerWin = 0;
   let tie = 0;
 
+  // Playing 5 rounds
   for (i = 0; i < 5; i++) {
     result = playRound(getComputerChoice(), playerSelection());
 
@@ -53,8 +54,10 @@ function game() {
 
   if (userWin > computerWin) {
     console.log(`User wins with ${userWin} winning out of 5 rounds`);
-  } else {
+  } else if (computerWin > userWin) {
     console.log(`Computer wins with ${computerWin} winning out of 5 rounds`);
+  } else {
+    console.log(`It was a tie`);
   }
 }
 
