@@ -29,9 +29,9 @@ function playRound(computerSelection, playerSelection) {
 // Looping the game for 5 straight rounds
 function startGame() {
   let result;
-  let userWins,
-    computerWins,
-    ties = 0;
+  let userWins = 0;
+  let computerWins = 0;
+  let ties = 0;
 
   // Loop for 5 rounds
   for (i = 0; i < 5; i++) {
