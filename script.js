@@ -1,21 +1,18 @@
-// Generate and return random input
+// Randomly generate a value for pc
 function getComputerChoice() {
-  let choice = ["rock", "paper", "scissors"]; // choices
-
-  // generate random by lentgh of choice array
+  let choice = ["rock", "paper", "scissors"];
   let randomNum = Math.floor(Math.random() * choice.length);
   return choice[randomNum];
 }
 
-// Prompt user for input and return
-function playerSelection() {
-  let userChoice = prompt("choose between rock, paper and scissors", "");
+// Get user input
+function playerChoice() {
+  let userChoice = prompt("Choose you're weapon (rock, paper or scissors)", "");
   return userChoice.toLowerCase();
 }
 
-// Game logic
+// head to head compare the values
 function playRound(computerSelection, playerSelection) {
-  // choose winner
   if (playerSelection === computerSelection) {
     return "tie";
   } else if (
@@ -26,39 +23,41 @@ function playRound(computerSelection, playerSelection) {
     return true;
   }
 
-  return false;
+  return false; // false if player loses the battle
 }
 
-// Game function that keeps playing round until certain point
-function game() {
+// Looping the game for 5 straight rounds
+function startGame() {
   let result;
-  let userWin = 0;
-  let computerWin = 0;
-  let tie = 0;
+  let userWins,
+    computerWins,
+    ties = 0;
 
-  // Playing 5 rounds
+  // Loop for 5 rounds
   for (i = 0; i < 5; i++) {
-    result = playRound(getComputerChoice(), playerSelection());
+    // get the values from playround function
+    result = playRound(getComputerChoice(), playerChoice());
 
-    // keep updating the wins, loses and ties
+    // Update wins, loses, ties
     if (result === "tie") {
-      tie += 1;
+      ties += 1;
     } else if (result) {
-      userWin += 1;
+      userWins += 1;
     } else {
-      computerWin += 1;
+      computerWins += 1;
     }
   }
 
-  console.log(`User : ${userWin}\nPC: ${computerWin}\nTie : ${tie}`);
+  console.log(`User : ${userWins}\nPC: ${computerWins}\nTie : ${ties}`);
 
-  if (userWin > computerWin) {
-    console.log(`User wins with ${userWin} winning out of 5 rounds`);
-  } else if (computerWin > userWin) {
-    console.log(`Computer wins with ${computerWin} winning out of 5 rounds`);
+  // Evaluate who won the round
+  if (userWins > computerWins) {
+    console.log(`User wins with ${userWins} winning out of 5 rounds`);
+  } else if (computerWins > userWins) {
+    console.log(`Computer wins with ${computerWins} winning out of 5 rounds`);
   } else {
     console.log(`It was a tie`);
   }
 }
 
-game();
+startGame();
