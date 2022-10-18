@@ -1,0 +1,96 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+/* Body styles */
+body {
+  font-family: "Sora", sans-serif;
+  background-color: #f8f8f8;
+  color: #222222;
+}
+
+/* centering all elements */
+.container {
+  width: 71.25rem;
+  margin: 0 auto;
+}
+
+/* Header styels */
+.header,
+.game {
+  background-color: #e9e9e9;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.title {
+  padding: 10px;
+  font-size: 1.875rem;
+  color: #a7a7a7;
+}
+
+/* game section */
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3.75em 0;
+}
+
+.weapon-desc {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-transform: capitalize;
+}
+
+.rules-desc {
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.points-update-section {
+  margin: 3.125em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d8d8d8;
+  border-radius: 5px;
+  padding: 5em 10em;
+}
+
+.points-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25em;
+  font-size: 6.25rem;
+}
+
+.user-points,
+.pc-points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user,
+.pc {
+  font-size: 1.125rem;
+}
+
+.win-alert {
+  font-size: 1.375rem;
+  margin-top: 1.5em;
+}
