@@ -94,3 +94,8 @@ body {
   font-size: 1.375rem;
   margin-top: 1.5em;
 }
+
+/* weapons section */
+.weapons-section {
+  background-color: #d8d8d8;
+}
