@@ -99,3 +99,8 @@ body {
 .weapons-section {
   background-color: #d8d8d8;
 }
+
+/* play again button */
+.disabled {
+  display: none;
+}
