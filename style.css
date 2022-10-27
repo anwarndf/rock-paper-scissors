@@ -13,9 +13,9 @@ html {
 
 /* Body styles */
 body {
-  font-family: "Sora", sans-serif;
-  background-color: #f8f8f8;
-  color: #222222;
+  font-family: "Poppins", sans-serif;
+  background-color: #262122;
+  color: #634e48;
 }
 
 /* centering all elements */
@@ -25,74 +25,89 @@ body {
 }
 
 /* Header styels */
-.header,
-.game {
-  background-color: #e9e9e9;
+.header {
   margin-top: 10px;
-  border-radius: 5px;
+  border-bottom: 2px solid #bd9e7d;
 }
 
 .title {
-  padding: 10px;
-  font-size: 1.875rem;
-  color: #a7a7a7;
+  padding: 10px 0 10px 0;
 }
 
-/* game section */
-.game {
+/* Rules paragraph */
+.para {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 3.75em 0;
+  color: #634e48;
+  margin-top: 60px;
 }
 
-.weapon-desc {
+.p1 {
   font-size: 1.875rem;
   font-weight: 700;
-  margin-bottom: 0.5em;
-  text-transform: capitalize;
 }
 
-.rules-desc {
-  font-weight: 400;
-  font-size: 1.75rem;
+.p2 {
+  font-size: 2.1875rem;
+  font-weight: 600;
 }
 
-.points-update-section {
-  margin: 3.125em 0;
+/* ICONS section */
+.icons {
+  border: 2px solid #bd9e7d;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-color: #d8d8d8;
-  border-radius: 5px;
-  padding: 5em 10em;
+  gap: 136px;
+  padding: 50px;
+  margin-top: 60px;
 }
 
-.points-flex {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.25em;
-  font-size: 6.25rem;
+button {
+  background-color: #262122;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 
-.user-points,
-.pc-points {
+/* Button animation */
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img:hover {
+  transition: 0.1s all;
+  transform: translateY(-4px);
+}
+
+img:active {
+  transform: translateY(4px);
+}
+
+/* Points updates */
+.points {
+  border: 2px solid #bd9e7d;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  gap: 200px;
+  margin-top: 60px;
 }
 
 .user,
 .pc {
-  font-size: 1.125rem;
-}
-
-.win-alert {
-  font-size: 1.375rem;
-  margin-top: 1.5em;
+  padding: 50px;
+  font-size: 2.1875rem;
 }
 
 /* weapons section */
