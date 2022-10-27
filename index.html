@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -16,37 +16,31 @@
   <body>
     <!-- <script src="script.js"></script> -->
     <header class="container header">
-      <h3 class="title">rock paper scissors</h3>
+      <h3 class="title"><img src="./ROCK PAPER SCISSORS.png" alt="logo" /></h3>
     </header>
 
     <!-- game section -->
-    <section class="container game">
-      <p class="weapon-desc">Select your weapon wisely</p>
-      <p class="rules-desc">First to get 5 points wins the game</p>
+    <section class="container para">
+      <p class="p1">Select your weapon wisely</p>
+      <p class="p2">First to get 5 points wins the game</p>
+    </section>
 
-      <section class="points-update-section">
-        <section class="points-flex">
-          <div class="user-points">
-            <p class="user">User</p>
-            <p class="updateUserPoint">0</p>
-          </div>
-          <div class="pc-points">
-            <p class="pc">PC</p>
-            <p class="updatePcPoint">0</p>
-          </div>
-        </section>
+    <section class="container icons">
+      <button class="btn-rock" name="rock">
+        <img src="./fa-regular_hand-rock.png" alt="rock" />
+      </button>
+      <button class="btn-paper" name="paper">
+        <img src="./fa-regular_hand-paper.png" alt="paper" />
+      </button>
+      <button class="btn-scissors" name="scissors">
+        <img src="./fa6-regular_hand-scissors.png" alt="scissors" />
+      </button>
+    </section>
 
-        <p class="win-alert">...</p>
-        <p class="disabled">
-          <button class="play-again">Wanna play again</button>
-        </p>
-      </section>
-
-      <section class="weapons-section">
-        <button class="btn-rock" name="rock">rock</button>
-        <button class="btn-paper" name="paper">paper</button>
-        <button class="btn-scissors" name="scissors">scissors</button>
-      </section>
+    <section class="container points">
+      <p class="user">you</p>
+      <span>|</span>
+      <p class="pc">pc</p>
     </section>
 
     <!-- JS -->
