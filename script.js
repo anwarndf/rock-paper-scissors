@@ -1,9 +1,11 @@
 const btnrock = document.querySelector(".btn-rock");
 const btnpaper = document.querySelector(".btn-paper");
 const btnscissors = document.querySelector(".btn-scissors");
-const winalert = document.querySelector(".win-alert");
-const userPointUpdate = document.querySelector(".updateUserPoint");
-const pcPointUpdate = document.querySelector(".updatePcPoint");
+const para = document.querySelector(".para");
+
+const p2 = document.querySelector(".p2");
+const userPoints = document.querySelector(".user");
+const pcPoints = document.querySelector(".pc");
 const playAgain = document.querySelector(".disabled");
 const playAgainbtn = document.querySelector(".play-again");
 
@@ -27,7 +29,7 @@ let pcwin = 0;
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    winalert.textContent = "Tie";
+    p2.textContent = "Tie";
   } else if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "paper") ||
@@ -35,19 +37,19 @@ function playRound(playerSelection, computerSelection) {
   ) {
     userwin += 1;
     console.log(userwin);
-    userPointUpdate.textContent = userwin;
-    winalert.textContent = `You win, (${playerSelection} beats ${computerSelection})`;
+    userPoints.textContent = userwin;
+    p2.textContent = `You win, (${playerSelection} beats ${computerSelection})`;
   } else {
     pcwin += 1;
-    pcPointUpdate.textContent = pcwin;
-    winalert.textContent = `You lose, (${computerSelection} beats ${playerSelection})`;
+    pcPoints.textContent = pcwin;
+    p2.textContent = `You lose, (${computerSelection} beats ${playerSelection})`;
   }
 
   if (userwin === 5 || pcwin === 5) {
-    playAgain.style.display = "block";
-
-    playAgainbtn.addEventListener("click", () => {
-      location.reload();
+    para.forEach((p) => {
+      p.style.display = "none";
     });
+
+    para.innerHTML = `<p class='p2'>Wanna play again?</p>`;
   }
 }
