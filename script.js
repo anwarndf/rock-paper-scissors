@@ -1,8 +1,7 @@
 const btnrock = document.querySelector(".btn-rock");
 const btnpaper = document.querySelector(".btn-paper");
 const btnscissors = document.querySelector(".btn-scissors");
-const para = document.querySelector(".para");
-
+const p1 = document.querySelector(".p1");
 const p2 = document.querySelector(".p2");
 const userPoints = document.querySelector(".user");
 const pcPoints = document.querySelector(".pc");
@@ -46,10 +45,12 @@ function playRound(playerSelection, computerSelection) {
   }
 
   if (userwin === 5 || pcwin === 5) {
-    para.forEach((p) => {
-      p.style.display = "none";
-    });
+    p1.textContent = "Do you want to play again?";
+    p2.innerHTML = "<button class='again'>yes</button>";
+    const againbtn = document.querySelector(".again");
 
-    para.innerHTML = `<p class='p2'>Wanna play again?</p>`;
+    againbtn.addEventListener("click", () => {
+      location.reload();
+    });
   }
 }
