@@ -84,12 +84,18 @@ button {
   transform: translateY(4px);
 }
 
-img:hover {
+.rock:hover,
+.paper:hover,
+.scissors:hover,
+.again:hover {
   transition: 0.1s all;
   transform: translateY(-4px);
 }
 
-img:active {
+.rock:active,
+.paper:active,
+.scissors:active,
+.again:active {
   transform: translateY(4px);
 }
 
@@ -118,4 +124,29 @@ img:active {
 /* play again button */
 .disabled {
   display: none;
+}
+
+/* playagainbutton styles */
+.again {
+  border: 2px solid #483d3a;
+  border-radius: 4px;
+  font-size: 1.875rem;
+  padding: 8px 32px;
+  color: #483d3a;
+  margin-top: 20px;
+}
+
+/* footer */
+.foot {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 93px;
+}
+
+.github-icon {
+  width: 30px;
+  height: 30px;
 }
